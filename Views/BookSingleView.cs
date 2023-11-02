@@ -1,36 +1,23 @@
-using System;
-
 namespace MVC.Views
 {
-    using Models; // chú ý  cách dùng namespace
-    /// <summary>
-    /// class để hiển thị một cuốn sách, chỉ sử dụng trong dự án ( internal )
-    /// </summary>
+    using Models;
+
     internal class BookSingleView
     {
         protected Book Model; // biến lư trữ thông tin cuốn sách đang cần hiển thị
-        /// <summary>
-        /// hàm contructor
-        /// </summary>
-        /// <param name="model"> cuốn sách cụ thể sẽ được hiển thị </param>
+        
         public BookSingleView(Book model)
         {
             Model = model;
         }
-        /// <summary>
-        /// in thông báo ra màn hình console với chữ màu 
-        /// </summary>
-        /// <param name="message"></param>
-        /// <param name="color"></param>
+      
         protected void WriteLine(string message, ConsoleColor color)
         {
             Console.ForegroundColor = color;
             Console.WriteLine(message);
             Console.ResetColor();
         }
-        /// <summary>
-        /// thực hiện in thông tin ra màn hình console
-        /// </summary>
+        
         public void Render()
         {
             if (Model == null) // check object có dữ liệu không
@@ -44,6 +31,7 @@ namespace MVC.Views
             /*  sử dụng cách tạo xâu kiểu " interpolation" 
              * và dùng dấu cách để căn chỉnh tạo thẩm mỹ 
              */
+            Console.WriteLine($"ID:             {Model.Id}");
             Console.WriteLine($"Authors:        {Model.Authors}");
             Console.WriteLine($"Title:          {Model.Title}");
             Console.WriteLine($"Publisher:      {Model.Publisher}");
