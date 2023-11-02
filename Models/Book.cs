@@ -100,12 +100,9 @@ namespace MVC.Models
         /// <summary>
         /// file sách ( không có đường dẫn)
         /// </summary>
-        public string fileName
+        public string FileName
         {
             get { return System.IO.Path.GetFileName(_file); }
         }
-        // test
-        // test
-        // test
     }
 }
