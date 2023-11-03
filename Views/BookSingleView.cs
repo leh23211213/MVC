@@ -31,7 +31,8 @@ namespace MVC.Views
             /*  sử dụng cách tạo xâu kiểu " interpolation" 
              * và dùng dấu cách để căn chỉnh tạo thẩm mỹ 
              */
-            Console.WriteLine($"ID:             {Model.Id}");
+             
+            // Console.WriteLine($"ID:             {Model.Id}");
             Console.WriteLine($"Authors:        {Model.Authors}");
             Console.WriteLine($"Title:          {Model.Title}");
             Console.WriteLine($"Publisher:      {Model.Publisher}");
