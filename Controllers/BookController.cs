@@ -1,5 +1,6 @@
 namespace MVC.Controllers
 {
+    using BookMan.ConsoleApp.Views;
     using Models;
     using Views;
     /// <summary>
@@ -26,6 +27,10 @@ namespace MVC.Controllers
         };
 
             BookSingleView view = new BookSingleView(model);
+            view.Render();
+        }
+        public void Create(){
+            BookCreateView view = new BookCreateView();
             view.Render();
         }
     }
