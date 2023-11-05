@@ -14,7 +14,8 @@ namespace MVC.Controllers
         /// <param name="id"></param>
         public void Single(int id)
         {
-            Book model = new Book {
+            Book model = new Book
+            {
                 Id = 1,
                 Authors = "Adam Freeman",
                 Title = "Expert ASP.NET Web API 2 for MVC Dev",
@@ -24,13 +25,33 @@ namespace MVC.Controllers
                 Description = "Expert insight and understanding of how to create, customize, and deploy comlox, flexible, and robust HTTP web services",
                 Rating = 4,
                 Reading = true
-        };
+            };
 
             BookSingleView view = new BookSingleView(model);
             view.Render();
         }
-        public void Create(){
+        public void Create()
+        {
             BookCreateView view = new BookCreateView();
+            view.Render();
+        }
+        public void Update(int id)
+        {
+            var model = new Book();
+            var view = new BookUpdateView(model);
+            view.Render();
+        }
+        public void List()
+        {
+            Book[] model = new Book[] {
+                new Book{Id = 1, Title = "A new book 1"},
+                new Book{Id = 2, Title = "A new book 2"},
+                new Book{Id = 3, Title = "A new book 3"},
+                new Book{Id = 4, Title = "A new book 4"},
+                new Book{Id = 5, Title = "A new book 5"},
+                new Book{Id = 6, Title = "A new book 6"},
+            };
+            BookListView view = new BookListView(model);
             view.Render();
         }
     }

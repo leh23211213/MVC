@@ -21,7 +21,7 @@ namespace MVC.Models
             set { if (!string.IsNullOrEmpty(value)) _authors = value; }
         }
 
-        private string _title = "A now book";
+        private string _title = "A new book";
 
         public string Title
         {

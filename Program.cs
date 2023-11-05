@@ -9,7 +9,6 @@ namespace MVC
             while (true)
             {
                 Console.Write("Request> ");
-
                 string request = Console.ReadLine();
                 if (request == null) { continue; }
                 else
@@ -19,6 +18,9 @@ namespace MVC
                         Console.WriteLine("Press any key to continue...");
                         break;
                     }
+
+                    // ****************************************************
+
                     switch (request.ToLower())
                     {
                         case "single":
@@ -26,6 +28,12 @@ namespace MVC
                             break;
                         case "create":
                             controller.Create();
+                            break;
+                        case "update":
+                            controller.Update(1);
+                            break;
+                        case "list":
+                            controller.List();
                             break;
                         default:
                             Console.WriteLine("Unknown command");
