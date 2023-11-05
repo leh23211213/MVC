@@ -1,3 +1,4 @@
+using Framework;
 namespace MVC.Views
 {
     using Models;
@@ -11,22 +12,16 @@ namespace MVC.Views
             Model = model;
         }
       
-        protected void WriteLine(string message, ConsoleColor color)
-        {
-            Console.ForegroundColor = color;
-            Console.WriteLine(message);
-            Console.ResetColor();
-        }
         
         public void Render()
         {
             if (Model == null) // check object có dữ liệu không
             {
-                WriteLine("No Book Found!", ConsoleColor.Red);
+                ViewHelp.WriteLine("No Book Found!", ConsoleColor.Red);
 
                 return;
             }
-            WriteLine("Book Detail Information", ConsoleColor.Red);
+            ViewHelp.WriteLine("Book Detail Information", ConsoleColor.Red);
 
             /*  sử dụng cách tạo xâu kiểu " interpolation" 
              * và dùng dấu cách để căn chỉnh tạo thẩm mỹ 
