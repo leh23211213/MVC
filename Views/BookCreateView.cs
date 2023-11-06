@@ -1,5 +1,5 @@
 using Framework;
-namespace BookMan.ConsoleApp.Views
+namespace MVC.Views
 {
     /// <summary>
     /// class để thêm một cuốn sách mới
@@ -28,6 +28,6 @@ namespace BookMan.ConsoleApp.Views
             var file = ViewHelp.InputString("File");
 
         }
-      
+
     }
 }
