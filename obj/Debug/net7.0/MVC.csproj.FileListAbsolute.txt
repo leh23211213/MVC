@@ -12,3 +12,6 @@ E:\VSCode\Github\MVC\obj\Debug\net7.0\refint\MVC.dll
 E:\VSCode\Github\MVC\obj\Debug\net7.0\MVC.pdb
 E:\VSCode\Github\MVC\obj\Debug\net7.0\MVC.genruntimeconfig.cache
 E:\VSCode\Github\MVC\obj\Debug\net7.0\ref\MVC.dll
+E:\VSCode\Github\MVC\bin\Debug\net7.0\Newtonsoft.Json.dll
+E:\VSCode\Github\MVC\obj\Debug\net7.0\MVC.csproj.AssemblyReference.cache
+E:\VSCode\Github\MVC\obj\Debug\net7.0\MVC.csproj.CopyComplete

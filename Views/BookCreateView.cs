@@ -1,24 +1,15 @@
-using Framework;
 namespace MVC.Views
 {
-    /// <summary>
-    /// class để thêm một cuốn sách mới
-    /// </summary>
-    internal class BookCreateView
+    using Framework;
+    internal class BookCreateView : ViewBase
     {
-        public BookCreateView()
-        {
-
-        }
-        /// <summary>
-        /// yêu cầu người dùng nhập từng thông tin và lưu lại thông tin đó
-        /// </summary>
-        public void Render()
+        public BookCreateView() { }
+        public override void Render()
         {
             ViewHelp.WriteLine("Create a new book", ConsoleColor.Green);
             var title = ViewHelp.InputString("Title");
             var authors = ViewHelp.InputString("Authors");
-            var Publisher = ViewHelp.InputString("Publisher");
+            var publisher = ViewHelp.InputString("Publisher");
             var year = ViewHelp.InputInt("Year");
             var edition = ViewHelp.InputInt("Edition");
             var tags = ViewHelp.InputString("Tags");
@@ -26,8 +17,6 @@ namespace MVC.Views
             var rate = ViewHelp.InputInt("Rate");
             var reading = ViewHelp.InputBool("Reading");
             var file = ViewHelp.InputString("File");
-
         }
-
     }
 }

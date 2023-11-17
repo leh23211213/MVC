@@ -1,37 +1,33 @@
 namespace MVC.Controllers
 {
     using DataServices;
-    using Models;
+    using Framework;
     using Views;
-    public class BookController
+    public class BookController : ControllerBase
     {
         protected Repository Repository;
         public BookController(SimpleDataAccess context)
         {
             Repository = new Repository(context);
         }
-        public void Single(int id)
+        public void Single(int id, string path = "")
         {
             var model = Repository.Select(id);
-            BookSingleView view = new BookSingleView(model);
-            view.Render();
+            Render(new BookSingleView(model), path);
         }
         public void Create()
         {
-            BookCreateView view = new BookCreateView();
-            view.Render();
+            Render(new BookCreateView());
         }
         public void Update(int id)
         {
-            var model = new Book();
-            var view = new BookUpdateView(model);
-            view.Render();
+            var model = Repository.Select(id);
+            Render(new BookUpdateView(model));
         }
-        public void List()
+        public void List(string path = "")
         {
             var model = Repository.Select();
-            BookListView view = new BookListView(model);
-            view.Render();
+            Render(new BookListView(model), path);
         }
     }
 }
