@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ia8McKFe4dScNUu+2xqWw+i6Wg2oD+2G+g70gfkHKowDNsTRbN6WiWQbj81Z+D/tn961BAubKyzMdCkjoTMWxA==",
+  "dgSpecHash": "opTjn23m1zduNpweHAg4u3uxR3QCe4iY3Dwv/E9GQLVYUrCmLigI8nU+bmH6N8JjXdgn2DHQivfKXmnCx0OcEw==",
   "success": true,
   "projectFilePath": "E:\\VSCode\\Github\\MVC\\MVC.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

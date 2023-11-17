@@ -1,32 +1,20 @@
-using Framework;
 namespace MVC.Views
 {
     using Models;
-
-    internal class BookSingleView
+    using Framework;
+    internal class BookSingleView : ViewBase<Book>
     {
-        protected Book Model; // biến lư trữ thông tin cuốn sách đang cần hiển thị
-        
-        public BookSingleView(Book model)
+        public BookSingleView(Book model) : base(model) { }
+
+        public override void Render()
         {
-            Model = model;
-        }
-      
-        
-        public void Render()
-        {
-            if (Model == null) // check object có dữ liệu không
+            if (Model == null)
             {
                 ViewHelp.WriteLine("No Book Found!", ConsoleColor.Red);
-
                 return;
             }
             ViewHelp.WriteLine("Book Detail Information", ConsoleColor.Red);
 
-            /*  sử dụng cách tạo xâu kiểu " interpolation" 
-             * và dùng dấu cách để căn chỉnh tạo thẩm mỹ 
-             */
-             
             // Console.WriteLine($"ID:             {Model.Id}");
             Console.WriteLine($"Authors:        {Model.Authors}");
             Console.WriteLine($"Title:          {Model.Title}");
