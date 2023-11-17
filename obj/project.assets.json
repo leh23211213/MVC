@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VSCode\\Github\\MVC\\MVC.csproj",
+      "projectUniqueName": "e:\\VSCode\\Github\\MVC\\MVC.csproj",
       "projectName": "MVC",
-      "projectPath": "E:\\VSCode\\Github\\MVC\\MVC.csproj",
+      "projectPath": "e:\\VSCode\\Github\\MVC\\MVC.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "E:\\VSCode\\Github\\MVC\\obj\\",
+      "outputPath": "e:\\VSCode\\Github\\MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"

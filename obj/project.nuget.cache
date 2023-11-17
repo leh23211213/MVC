@@ -3,15 +3,6 @@
   "dgSpecHash": "opTjn23m1zduNpweHAg4u3uxR3QCe4iY3Dwv/E9GQLVYUrCmLigI8nU+bmH6N8JjXdgn2DHQivfKXmnCx0OcEw==",
   "success": true,
   "projectFilePath": "E:\\VSCode\\Github\\MVC\\MVC.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\lenovo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
-  ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\VSCode\\Github\\MVC\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "expectedPackageFiles": [],
+  "logs": []
 }
