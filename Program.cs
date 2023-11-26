@@ -1,39 +1,13 @@
 namespace MVC
 {
-    using DataServices;
-    using Controllers;
     using Framework;
 
-    internal class Program
+    internal partial class Program
     {
         private static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            SimpleDataAccess context = new SimpleDataAccess();
-            BookController controller = new BookController(context);
-
-            Router r = Router.Instance;
-
-            r.Register("about", About);
-            r.Register("help", Help);
-            r.Register(route: "create",
-                action: p => controller.Create(),
-                help: "[create]\r\nnhập sách mới");
-            r.Register(route: "update",
-                action: p => controller.Update(p["id"].ToInt()),
-                help: "[update ? id = <value>]\r\ntìm và cập nhập sách");
-            r.Register(route: "list",
-                action: p => controller.List(),
-                help: "[list]\r\nhiển thị tất cả các sách");
-            r.Register(route: "single",
-                action: p => controller.Single(p["id"].ToInt()),
-                help: "[single ? id = <value> \r\nhiển thị một cuốn sách theo id");
-            r.Register(route: "list file",
-                action: p => controller.List(p["path"]),
-                help: "[list file ? path = <value>]\r\nhiển thị tất cả sách");
-            r.Register(route: "single file",
-                action: p => controller.Single(p["id"].ToInt(), p["path"]),
-                help: "[single file ? id = <value> & path = <value>]");
+            ConfigRouter();
             while (true)
             {
                 ViewHelp.Write("# Request: ", ConsoleColor.Green);
@@ -50,7 +24,18 @@ namespace MVC
                     }
 
                     // ****************************************************
-                    Router.Instance.Forward(request);
+                    try
+                    {
+                        Router.Instance.Forward(request);
+                    }
+                    catch (Exception e)
+                    {
+                        ViewHelp.WriteLine(e.Message, ConsoleColor.Red);
+                    }
+                    finally
+                    {
+                        Console.WriteLine();
+                    }
                 }
             }
         }

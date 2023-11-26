@@ -1,12 +1,8 @@
 namespace MVC.Models
 {
-    /// <summary>
-    ///  Lớp mô tả sách điện tử
-    /// </summary>
     public class Book
     {
         private int _id = 1;
-
         public int Id
         {
             get { return _id; }

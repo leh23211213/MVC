@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\VSCode\\Github\\MVC\\MVC.csproj",
+      "projectUniqueName": "E:\\VSCode\\Github\\MVC\\MVC.csproj",
       "projectName": "MVC",
-      "projectPath": "e:\\VSCode\\Github\\MVC\\MVC.csproj",
+      "projectPath": "E:\\VSCode\\Github\\MVC\\MVC.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "e:\\VSCode\\Github\\MVC\\obj\\",
+      "outputPath": "E:\\VSCode\\Github\\MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -116,13 +116,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\VSCode\\Github\\MVC\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
