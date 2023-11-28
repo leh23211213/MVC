@@ -7,17 +7,19 @@ namespace MVC
         private static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            // var text = Config.Instance.PromptText;
+            // var color = Config.Instance.PromptColor;
             ConfigRouter();
             while (true)
             {
-                ViewHelp.Write("# Request: ", ConsoleColor.Green);
+                ViewHelp.Write("Request: ", ConsoleColor.Blue);
                 string userInput = Console.ReadLine();
                 string request = userInput.ToLower();
 
                 if (request == null) { continue; }
                 else
                 {
-                    if (request == "quit" || request == "q")
+                    if (request.Replace(" ", "") == "quit" || request.Replace(" ", "") == "q")
                     {
                         Console.WriteLine("Press any key to continue...");
                         break;

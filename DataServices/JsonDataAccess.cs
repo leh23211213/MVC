@@ -14,27 +14,12 @@ namespace MVC.DataServices
                 SaveChanges();
                 return;
             }
-            // using SystemJson = System.Text.Json.JsonSerializer;
-            // using NewtonsoftJson = Newtonsoft.Json.JsonSerializer;
-            // BUG : 
-            // JsonSerializer serializer = new JsonSerializer();
-            // using (StreamReader sReader = new StreamReader(_file))
-            // using (JsonReader jReader = new JsonTextReader(sReader))
-            // {
-            //     Books = serializer.Deserialize<List<Book>>(jReader);
-            // }
+
             var jsonString = File.ReadAllText(_file);
             Books = JsonConvert.DeserializeObject<List<Book>>(jsonString);
         }
         public void SaveChanges()
         {
-            // BUG : 
-            // JsonSerializer serializer = new JsonSerializer();
-            // using (StreamWriter sWriter = new StreamWriter(_file))
-            // using (JsonWriter jWriter = new JsonTextWriter(sWriter))
-            // {
-            //     serializer.Serialize(jWriter, Books);
-            // }
             var jsonString = JsonConvert.SerializeObject(Books);
             File.WriteAllText(_file, jsonString);
         }

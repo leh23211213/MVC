@@ -11,6 +11,7 @@ namespace MVC
             IDataAccess context = new JsonDataAccess();
             BookController controller = new BookController(context);
             ShellController shell = new ShellController(context);
+            // ConfigController config = new ConfigController();
             Router r = Router.Instance;
             r.Register("about", About);
             r.Register("help", Help);
@@ -76,6 +77,19 @@ namespace MVC
             r.Register(route: "show stats",
                 action: p => controller.Stats(),
                 help: "[show stats]");
+            // BUG:
+            // r.Register(route: "config prompt text",
+            //     action: p => config.ConfigPromptText(p["text"]),
+            //     help: "[config prompt text ? text = <value>]");
+            // r.Register(route: "config prompt color",
+            //     action: p => config.ConfigPromptColor(p["color"]),
+            //     help: "[config prompt color ? color = <value>]");
+            // r.Register(route: "current data access",
+            //     action: p => config.CurrentDataAccess(),
+            //     help: "[current data access]");
+            // r.Register(route: "config data access",
+            //     action: p => config.ConfigDataAccess(p["da"], p["file"]),
+            //     help: "[config data access ? da = <value:json,xml> & file = <value>]");
             #region helper
             // local funtion to convert parameter to book object
             Book toBook(Parameter p)
