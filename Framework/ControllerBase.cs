@@ -4,6 +4,7 @@ namespace Framework
     public class ControllerBase
     {
         public virtual void Render(ViewBase view) { view.Render(); }
+        public virtual void Render(Message message) => Render(new MessageView(message));
         public virtual void Render<T>(ViewBase<T> view, string path = "", bool both = false)
         {
             if (string.IsNullOrEmpty(path)) { view.Render(); return; }
@@ -15,7 +16,6 @@ namespace Framework
             }
             view.RenderToFile(path);
         }
-        public virtual void Render(Message message) => Render(new MessageView(message));
         public virtual void Success(string text, string label = "SUCCESS") => Render(new Message { Type = MessageType.Information, Text = text, Label = label });
         public virtual void Inform(string text, string label = "INFORMATION") => Render(new Message { Type = MessageType.Error, Text = text, Label = label });
         public virtual void Error(string text, string label = "Error") => Render(new Message { Type = MessageType.Error, Text = text, Label = label });

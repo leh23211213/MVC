@@ -1,4 +1,3 @@
-using System;
 namespace Framework
 {
     public static class ViewHelp

@@ -14,7 +14,6 @@ namespace Framework
             _helpTable = new Dictionary<string, string>();
         }
         public static Router Instance => _instance ?? (_instance = new Router());
-        
         private readonly RoutingTable _routingTable;
         private readonly Dictionary<string, string> _helpTable;
         public string GetRoutes()

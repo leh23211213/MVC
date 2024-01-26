@@ -1,5 +1,3 @@
-using System.Data.SqlTypes;
-
 namespace Framework
 {
     public static class Extension
