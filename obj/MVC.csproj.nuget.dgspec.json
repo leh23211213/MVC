@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\New folder\\VSCode\\Github\\MVC\\MVC.csproj": {}
+    "E:\\IT\\VSCode\\Github\\MVC\\MVC.csproj": {}
   },
   "projects": {
-    "E:\\New folder\\VSCode\\Github\\MVC\\MVC.csproj": {
+    "E:\\IT\\VSCode\\Github\\MVC\\MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\New folder\\VSCode\\Github\\MVC\\MVC.csproj",
+        "projectUniqueName": "E:\\IT\\VSCode\\Github\\MVC\\MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "E:\\New folder\\VSCode\\Github\\MVC\\MVC.csproj",
+        "projectPath": "E:\\IT\\VSCode\\Github\\MVC\\MVC.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "E:\\New folder\\VSCode\\Github\\MVC\\obj\\",
+        "outputPath": "E:\\IT\\VSCode\\Github\\MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

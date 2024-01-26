@@ -8,7 +8,7 @@ namespace MVC
     {
         private static void ConfigRouter()
         {
-            IDataAccess context = new JsonDataAccess();
+            IDataAccess context = new XmlDataAccess();
             BookController controller = new BookController(context);
             ShellController shell = new ShellController(context);
             // ConfigController config = new ConfigController();
