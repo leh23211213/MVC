@@ -19,6 +19,14 @@ namespace MVC.DataServices
         {
             return _context.Books.FirstOrDefault(b => b.Id == id);
         }
+        // public Book Select(int id)
+        // {
+        //     foreach (var b in _context.Books)
+        //     {
+        //         if (b.Id == id) return b;
+        //     }
+        //     return null;
+        // }
         public Book[] Select(string key)
         {
             var k = key.ToLower();
@@ -40,11 +48,37 @@ namespace MVC.DataServices
                 where b.Reading == true
                 select b
             */
+
         }
+        // public Book[] Select(string key)
+        // {
+        //     var temp = new List<Book>();
+        //     var k = key.ToLower();
+        //     foreach (var b in _context.Books)
+        //     {
+        //         var logic =
+        //             b.Title.ToLower().Contains(k) ||
+        //             b.Authors.ToLower().Contains(k) ||
+        //             b.Publisher.ToLower().Contains(k) ||
+        //             b.Tags.ToLower().Contains(k) ||
+        //             b.Description.ToLower().Contains(k);
+        //         if (logic) temp.Add(b);
+        //     }
+        //     return temp.ToArray();
+        // }
         public Book[] SelectMarket()
         {
             return _context.Books.Where(b => b.Reading == true).ToArray();
         }
+        // public Book[] SelectMarket()
+        // {
+        //     var list = new List<Book>();
+        //     foreach (var b in Books)
+        //     {
+        //         if (b.Reading) list.Add(b);
+        //     }
+        //     return list.ToArray();
+        // }
 
         public void Insert(Book book)
         {
@@ -52,6 +86,13 @@ namespace MVC.DataServices
             book.Id = id;
             _context.Books.Add(book);
         }
+        // public void Insert(Book book)
+        // {
+        //     var lastIndex = _context.Books.Count - 1;
+        //     var id = lastIndex < 0 ? 1 : _context.Books[lastIndex].Id + 1;
+        //     book.Id = id;
+        //     _context.Books.Add(book);
+        // }
         public bool Delete(int id)
         {
             var b = Select(id);
@@ -86,43 +127,3 @@ namespace MVC.DataServices
         }
     }
 }
-// public Book Select(int id)
-// {
-//     foreach (var b in _context.Books)
-//     {
-//         if (b.Id == id) return b;
-//     }
-//     return null;
-// }
-// public Book[] Select(string key)
-// {
-//     var temp = new List<Book>();
-//     var k = key.ToLower();
-//     foreach (var b in _context.Books)
-//     {
-//         var logic =
-//             b.Title.ToLower().Contains(k) ||
-//             b.Authors.ToLower().Contains(k) ||
-//             b.Publisher.ToLower().Contains(k) ||
-//             b.Tags.ToLower().Contains(k) ||
-//             b.Description.ToLower().Contains(k);
-//         if (logic) temp.Add(b);
-//     }
-//     return temp.ToArray();
-// }
-// public Book[] SelectMarket()
-// {
-//     var list = new List<Book>();
-//     foreach (var b in Books)
-//     {
-//         if (b.Reading) list.Add(b);
-//     }
-//     return list.ToArray();
-// }
-// public void Insert(Book book)
-// {
-//     var lastIndex = _context.Books.Count - 1;
-//     var id = lastIndex < 0 ? 1 : _context.Books[lastIndex].Id + 1;
-//     book.Id = id;
-//     _context.Books.Add(book);
-// }

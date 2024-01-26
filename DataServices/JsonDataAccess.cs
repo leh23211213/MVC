@@ -14,7 +14,6 @@ namespace MVC.DataServices
                 SaveChanges();
                 return;
             }
-
             var jsonString = File.ReadAllText(_file);
             Books = JsonConvert.DeserializeObject<List<Book>>(jsonString);
         }
@@ -25,33 +24,3 @@ namespace MVC.DataServices
         }
     }
 }
-
-/*
- * code json serialization from chatGPT
- */
-// namespace MVC.DataServices
-// {
-//     using System.Text.Json;
-//     using Models;
-//     public class JsonDataAccess
-//     {
-//         public List<Book> Books { get; set; } = new List<Book>();
-//         private readonly string _file = "data.json";
-
-//         public void Load()
-//         {
-//             if (!File.Exists(_file))
-//             {
-//                 SaveChanges();
-//                 return;
-//             }
-//             string jsonData = File.ReadAllText(_file);
-//             Books = JsonSerializer.Deserialize<List<Book>>(jsonData);
-//         }
-//         public void SaveChanges()
-//         {
-//             string jsonData = JsonSerializer.Serialize(Books);
-//             File.WriteAllText(_file, jsonData);
-//         }
-//     }
-// }
