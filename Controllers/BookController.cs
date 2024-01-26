@@ -45,7 +45,7 @@ namespace MVC.Controllers
         }
         public void Delete(int id, bool process = false)
         {
-            if (process = false)
+            if (process == false)
             {
                 var b = Repository.Select(id);
                 Confirm($"Do you want to delete this book ({b.Title}?)", $"do delete?id={b.Id}");
