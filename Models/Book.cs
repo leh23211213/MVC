@@ -71,9 +71,6 @@ namespace MVC.Models
             set { if (System.IO.File.Exists(value)) _file = value; }
         }
 
-        public string FileName
-        {
-            get { return System.IO.Path.GetFileName(_file); }
-        }
+        public string FileName => System.IO.Path.GetFileName(_file);
     }
 }
