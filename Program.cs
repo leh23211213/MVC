@@ -5,6 +5,7 @@ namespace MVC
     {
         private static void Main(string[] args)
         {
+            // TODO : Xem lại phương thức add/ SAVE.
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             // var text = Config.Instance.PromptText;
             // var color = Config.Instance.PromptColor;
