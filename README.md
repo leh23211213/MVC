@@ -35,9 +35,30 @@ To run project, run the following command:
   dotnet run
 ```
 
-## Screenshots
+## How to run project if you not use tools
 
-![Release Screenshot](<img src="E:\IT\VSCode\Github\MVC\img\aboutHelpCmd.png">)
+Follow the steps below to launch the project:
+
+    1. Clone the repository
+
+    2. Open folder: MVC\bin\Release\net8.0
+
+    3. Click run MVC.exe file
+
+## Run project Screenshots
+
+![Release Screenshot](https://i.imgur.com/tznDm67.png)
+![Release Screenshot](https://i.imgur.com/ex14vya.png)
+
+## Architecture
+
+- MVC
+- SOLID and Clean Code
+- Design Pattern – Singleton
+
+## Technologies
+
+- [Newtonsoft.Json](<(https://www.nuget.org/packages/Newtonsoft.Json/)>)
 
 ## Reference source
 
