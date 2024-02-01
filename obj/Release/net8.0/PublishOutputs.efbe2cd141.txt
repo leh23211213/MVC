@@ -1,0 +1,6 @@
+E:\IT\VSCode\Github\MVC\bin\Release\net8.0\publish\MVC.exe
+E:\IT\VSCode\Github\MVC\bin\Release\net8.0\publish\MVC.dll
+E:\IT\VSCode\Github\MVC\bin\Release\net8.0\publish\MVC.deps.json
+E:\IT\VSCode\Github\MVC\bin\Release\net8.0\publish\MVC.runtimeconfig.json
+E:\IT\VSCode\Github\MVC\bin\Release\net8.0\publish\MVC.pdb
+E:\IT\VSCode\Github\MVC\bin\Release\net8.0\publish\Newtonsoft.Json.dll

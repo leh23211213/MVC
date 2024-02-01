@@ -8,14 +8,14 @@ namespace Framework
     public class Router
     {
         private static Router _instance;
+        private readonly RoutingTable _routingTable;
+        private readonly Dictionary<string, string> _helpTable;
         private Router()
         {
             _routingTable = new RoutingTable();
             _helpTable = new Dictionary<string, string>();
         }
         public static Router Instance => _instance ?? (_instance = new Router());
-        private readonly RoutingTable _routingTable;
-        private readonly Dictionary<string, string> _helpTable;
         public string GetRoutes()
         {
             StringBuilder sb = new StringBuilder();
@@ -48,7 +48,6 @@ namespace Framework
             else
                 _routingTable[req.Route]?.Invoke(req.Parameter);
         }
-
         private class Request
         {
             public string Route { get; private set; }
@@ -59,17 +58,17 @@ namespace Framework
             }
             private void Analyze(string request)
             {
-                var firstIndex = request.IndexOf('?');
-                if (firstIndex < 0)
+                var questionMarkIndex = request.IndexOf('?');
+                if (questionMarkIndex < 0)
                 {
                     Route = request.ToLower().Trim();
                 }
                 else
                 {
-                    if (firstIndex <= 1) throw new Exception("Invalid request parameter");
+                    if (questionMarkIndex <= 1) throw new Exception("Invalid request parameter");
                     var tokens = request.Split(new[] { '?' }, 2, StringSplitOptions.RemoveEmptyEntries);
                     Route = tokens[0].Trim().ToLower();
-                    var parameterPart = request.Substring(firstIndex + 1).Trim();
+                    var parameterPart = request.Substring(questionMarkIndex + 1).Trim();
                     Parameter = new Parameter(parameterPart);
                 }
             }

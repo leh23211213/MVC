@@ -8,7 +8,7 @@ namespace MVC
     {
         private static void ConfigRouter()
         {
-            IDataAccess context = new XmlDataAccess();
+            IDataAccess context = new JsonDataAccess();
             BookController controller = new BookController(context);
             ShellController shell = new ShellController(context);
             // ConfigController config = new ConfigController();
@@ -17,25 +17,25 @@ namespace MVC
             r.Register("help", Help);
             r.Register(route: "create",
                 action: p => controller.Create(),
-                help: "[create]rnhập sách mới");
+                help: "[create] - nhập sách mới");
             r.Register(route: "do create",
                 action: p => controller.Create(toBook(p)),
                 help: "this route should be used only in code");
             r.Register(route: "update",
                 action: p => controller.Update(p["id"].ToInt()),
-                help: "[update ? id = <value>]rntìm và chập nhật sách");
+                help: "[update ? id = <value>] - tìm và chập nhật sách");
             r.Register(route: "do update",
                 action: p => controller.Update(p["id"].ToInt(), toBook(p)),
                 help: "this route should be used only in code");
             r.Register(route: "list",
                 action: p => controller.List(),
-                help: "[list]rhiển thị tất cả sách");
+                help: "[list] - hiển thị tất cả sách");
             r.Register(route: "list file",
                 action: p => controller.List(p["path"]),
-                help: "[list file ? path = <value>]rhiển thị tất cả sách");
+                help: "[list file ? path = <value>] - hiển thị tất cả sách");
             r.Register(route: "single",
                 action: p => controller.Single(p["id"].ToInt()),
-                help: "[single ? id = <value>]rhiển thị một cuốn sách");
+                help: "[single ? id = <value>] - hiển thị một cuốn sách");
             r.Register(route: "single file",
                 action: p => controller.Single(p["id"].ToInt(), p["path"]),
                 help: "[single file ? id = <value> & path = <value>]");
@@ -47,7 +47,7 @@ namespace MVC
                 help: "this route should be used only in code");
             r.Register(route: "filter",
                 action: p => controller.Filter(p["key"].ToString()),
-                help: "[filter ? key = <value>]rntìm sách theo từ khóa");
+                help: "[filter ? key = <value>] - tìm sách theo từ khóa");
             r.Register(route: "add shell",
                 action: p => shell.Shell(p["path"], p["ext"]),
                 help: "[add shell ? path = <value>]");

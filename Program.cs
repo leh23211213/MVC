@@ -1,7 +1,6 @@
 namespace MVC
 {
     using Framework;
-
     internal partial class Program
     {
         private static void Main(string[] args)
@@ -9,6 +8,7 @@ namespace MVC
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             // var text = Config.Instance.PromptText;
             // var color = Config.Instance.PromptColor;
+            Console.WriteLine("Type: 'About' or 'Help'to know more information");
             ConfigRouter();
             while (true)
             {
@@ -43,7 +43,7 @@ namespace MVC
         }
         private static void About(Parameter parameter)
         {
-            ViewHelp.WriteLine("Book manager version 1.0", ConsoleColor.Green);
+            ViewHelp.WriteLine("Book manager version 1.1", ConsoleColor.Green);
             ViewHelp.WriteLine("by HiepLe", ConsoleColor.Magenta);
         }
         private static void Help(Parameter parameter)
