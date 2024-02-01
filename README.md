@@ -1,11 +1,6 @@
 ## Management books project
 
-Synthesize basic and object-oriented knowledge in C#
-
-## About
-
-- MVC advantage:
-- MVC defect: It's more difficult to update, test, and debug code that has dependencies spread across two or more of these three areas.
+- Synthesize basic,advanced and object-oriented knowledge in C# for study
 
 ## Getting started
 
@@ -13,14 +8,14 @@ Use these intructions to get project up and running.
 
 ### Recommend tools
 
-- [Visual Studio 2022](<(https://tuhocict.com/asp-net-core-razor-pages-gioi-thieu-cai-dat/)>) or [Visual Studio Code](<(https://tuhocict.com/asp-net-core-razor-pages-gioi-thieu-cai-dat/)>)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=vscom_downloads)
 
 ### Installing
 
 To run project, run the following command:
 
 ```bash
-  clone https://github.com/leh23211213/MVC
+  git clone https://github.com/leh23211213/MVC
 ```
 
 ```bash
@@ -58,8 +53,8 @@ Follow the steps below to launch the project:
 
 ## Technologies
 
-- [Newtonsoft.Json](<(https://www.nuget.org/packages/Newtonsoft.Json/)>)
+- [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ## Reference source
 
-[Tu Hoc ICT](https://tuhocict.com/phan-tich-bai-toan/)
+- [Tu Hoc ICT](https://tuhocict.com/phan-tich-bai-toan/)
