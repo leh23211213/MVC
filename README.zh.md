@@ -1,4 +1,4 @@
-[![zh](https://img.shields.io/badge/lang-zh-red.svg)](http://www.gnu.org/licenses/agpl-3.0)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/leh23211213/MVC/blob/master/README.md)
 
 ## 项目管理书籍项目
 
