@@ -1,3 +1,5 @@
+[![zh](https://img.shields.io/badge/lang-zh-red.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
 ## Management books project
 
 - Synthesize basic,advanced and object-oriented knowledge in C# for study
