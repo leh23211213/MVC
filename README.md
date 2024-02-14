@@ -1,4 +1,4 @@
-[![zh](https://img.shields.io/badge/lang-zh-red.svg)](http://www.gnu.org/licenses/agpl-3.0)
+[![zh](https://img.shields.io/badge/lang-zh-red.svg)](https://github.com/leh23211213/MVC/blob/master/README.zh.md)
 
 ## Management books project
 
