@@ -2,7 +2,7 @@
 
 ## Management books project
 
-- Synthesize basic,advanced and object-oriented knowledge in C# for study
+- Synthesize basic, advanced and object-oriented knowledge in C# for study
 
 ## Getting started
 
@@ -32,13 +32,13 @@ To run project, run the following command:
   dotnet run
 ```
 
-## How to run project if you not use tools
+## How to run project if you not use any IDE for development
 
 Follow the steps below to launch the project:
 
-    1. Clone the repository
-
-    2. Open folder: MVC\bin\Release\net8.0
+    1. [Click here](https://github.com/leh23211213/MVC/tree/master/bin/Release/net8.0)
+    
+    2. Download the release version project
 
     3. Click run MVC.exe file
 
