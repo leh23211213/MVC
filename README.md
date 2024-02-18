@@ -35,12 +35,13 @@ To run project, run the following command:
 ## How to run project if you not use any IDE for development
 
 Follow the steps below to launch the project:
-
-    1. [Click here](https://github.com/leh23211213/MVC/tree/master/bin/Release/net8.0)
+    
+    1. Get in: https://github.com/leh23211213/MVC/tree/master/bin/Release/net8.0
     
     2. Download the release version project
 
     3. Click run MVC.exe file
+
 
 ## Run project Screenshots
 
